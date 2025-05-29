@@ -1,6 +1,7 @@
 :root {
-  --heart-color-0: rgb(244, 142, 161);
-  --heart-color-1: rgb(255, 0, 0);
+  --heart-color-0: rgb(240, 161, 174);
+  --heart-color-1: rgb(244, 142, 161);
+  --heart-color-2: rgb(248, 45, 45);
 }
 
 body {
@@ -72,6 +73,35 @@ body {
 
 .heart-mini::after {
   left: 45px;
+  top: 0;
+}
+
+.heart-mini-1 {
+  width: 80px;
+  aspect-ratio: 1/1;
+  background: var(--heart-color-2);
+  position: relative;
+  transform: rotate(-45deg);
+  animation: pulse 1s infinite;
+}
+
+.heart-mini-1::before,
+.heart-mini-1::after {
+  content: "";
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  background: var(--heart-color-2);
+  border-radius: 50%;
+}
+
+.heart-mini-1::before {
+  top: -40px;
+  left: 0;
+}
+
+.heart-mini-1::after {
+  left: 40px;
   top: 0;
 }
 

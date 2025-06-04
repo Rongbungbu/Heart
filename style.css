@@ -105,6 +105,14 @@ body {
   top: 0;
 }
 
+.love-rain {
+  animation: rain-fall 2.5s linear infinite;
+  pointer-events: none;
+  user-select: none;
+  text-shadow: 0 2px 8px #fff8, 0 0 2px #fff8;
+  will-change: top, opacity;
+}
+
 @keyframes pulse {
   0% {
     transform: rotate(-45deg) scale(1);
@@ -114,5 +122,19 @@ body {
   }
   100% {
     transform: rotate(-45deg) scale(1);
+  }
+}
+
+@keyframes rain-fall {
+  0% {
+    top: -60px;
+    opacity: 0.8;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    top: 110vh;
+    opacity: 0;
   }
 }
